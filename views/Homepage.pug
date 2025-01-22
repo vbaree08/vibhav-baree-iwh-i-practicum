@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 CRM Records
+        a(href="/update-cobj" class="homepage-link") Add to this table        
+        table(border="1")
+            thead
+                tr
+                    th Name
+                    th Bio
+                    th Type
+                    th Release Year   
+            tbody
+                each record in data
+                    tr
+                        td= record.properties.name || 'N/A'
+                        td= record.properties.bio || 'N/A'         
+                        td= record.properties.type || 'N/A'
+                        td= record.properties.release_year || 'N/A'

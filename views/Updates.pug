@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+            
+
+    body
+        h1 Update Custom Object Form
+        a(href="/" class="homepage-link") Return to the homepage
+        form(action="/update-cobj" method="POST" class="form-container")
+            div.form-group
+                label(for="name") Name:
+                input(type="text" name="name" required)
+            div.form-group
+                label(for="bio") Bio:
+                input(type="text" name="bio" required)
+            div.form-group
+                label(for="type") Type:
+                input(type="text" name="type" required)
+            div.form-group
+                label(for="release_year") Release Year:
+                input(type="datetime-local" name="release_year" required)
+            button(type="submit") Submit
